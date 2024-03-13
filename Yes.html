@@ -14,9 +14,19 @@
           alt="Cute animated illustration"
         />
       </div>
-      <button class="btn" id="yesButton" onclick="nextPage()">
-        Let's Fix 
+      <audio id="audioElement" src="happy_happy_happy.mp3"></audio>
+
+      <button class="btn" id="yesButton" onclick="playAudioAndGoToNextPage()">
+        Let's Fix
       </button>
     </div>
+    <script>
+      function playAudioAndGoToNextPage() {
+        var audioElement = document.getElementById("audioElement");
+        audioElement.volume = 0.5
+        audioElement.play();
+        // nextPage(); // You can define nextPage() function for navigating to next page
+      }
+    </script>
   </body>
 </html>
